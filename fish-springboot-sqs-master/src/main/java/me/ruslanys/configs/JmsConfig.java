@@ -15,19 +15,22 @@ import org.springframework.jms.support.destination.DynamicDestinationResolver;
 
 import javax.jms.Session;
 
-/**
- * @author Ruslan Molchanov (ruslanys@gmail.com)
- */
+
 @Configuration
 @EnableJms
 public class JmsConfig {
 
     private SQSConnectionFactory connectionFactory;
     
-    public JmsConfig(){
+    public JmsConfig(
+        @Value("${aws.access-key}") String awsAccessKey,
+                     @Value("${aws.secret-key}") String awsSecretKey) {
+    	awsAccessKey="";
+    	awsSecretKey="";
          connectionFactory = SQSConnectionFactory.builder()
                 .withRegion(Region.getRegion(Regions.EU_CENTRAL_1))
-                .withAWSCredentialsProvider(new EnvironmentVariableCredentialsProvider())
+                .withAWSCredentialsProvider(new StaticCredentialsProvider(
+                        new BasicAWSCredentials(awsAccessKey, awsSecretKey)))
                 .build();
     }
 
