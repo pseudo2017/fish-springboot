@@ -20,9 +20,7 @@ import org.springframework.stereotype.Service;
 
 import javax.jms.JMSException;
 
-/**
- * @author Ruslan Molchanov (ruslanys@gmail.com)
- */
+
 @Service
 @Slf4j
 public class TaskService {
