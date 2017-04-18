@@ -21,9 +21,7 @@ import javax.jms.JMSException;
 import java.io.IOException;
 import java.util.Random;
 
-/**
- * @author Ruslan Molchanov (ruslanys@gmail.com)
- */
+
 @Component
 @Slf4j
 public class TaskProcessor {
