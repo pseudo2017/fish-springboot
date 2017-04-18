@@ -3,9 +3,6 @@ package me.ruslanys.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-/**
- * @author Ruslan Molchanov (ruslanys@gmail.com)
- */
 @Data
 @AllArgsConstructor
 public class Event {
