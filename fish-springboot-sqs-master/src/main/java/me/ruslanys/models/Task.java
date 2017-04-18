@@ -5,9 +5,7 @@ import lombok.Data;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * @author Ruslan Molchanov (ruslanys@gmail.com)
- */
+
 @Data
 
 public class Task {
