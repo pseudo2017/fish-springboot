@@ -25,8 +25,7 @@ public class JmsConfig {
     private SQSConnectionFactory connectionFactory;
     
     public JmsConfig(@Value("${aws.access-key}") String awsAccessKey,@Value("${aws.secret-key}") String awsSecretKey){
-    	awsAccessKey="AKIAJI2LK2ZMFMLKESHA";
-    	awsSecretKey="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";
+    
          connectionFactory = SQSConnectionFactory.builder()
                 .withRegion(Region.getRegion(Regions.EU_CENTRAL_1))
                 .withAWSCredentialsProvider(new StaticCredentialsProvider(
